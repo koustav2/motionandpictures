@@ -31,6 +31,11 @@ const TEAM = [
     image:
       "https://static.wixstatic.com/media/27bb82_30a53595b8414e7992cfa2e564067449~mv2.png/v1/fill/w_600,h_600,al_c,q_85,usm_0.66_1.00_0.01/491544235_2201158460315131_5625146677533.png",
   },
+  {
+    name: "Kamalesh Majumdar",
+    role: "Drone Operator",
+    image: "/images/Kamalesh.jpeg",
+  },
 ];
 
 function useReveal(threshold = 0.2) {
@@ -58,21 +63,21 @@ export default function AboutUsPage() {
   };
 
   return (
-    <div className="w-full bg-rose-50 text-neutral-800">
+    <div className="w-full bg-black text-white">
       {/* HERO */}
       <section ref={hero.ref} className="relative mx-auto max-w-6xl px-4 py-20 sm:py-24 md:py-28">
         <motion.div variants={container} initial="hidden" animate={hero.controls}>
-          <motion.p variants={item} className="text-sm font-medium tracking-widest text-slate-600">
+          <motion.p variants={item} className="text-sm font-medium tracking-widest text-white/80">
             The Team Behind the Magic
           </motion.p>
           <motion.h1
             variants={item}
-            className="mt-3 font-serif text-4xl leading-[1.15] text-slate-700 sm:text-5xl md:text-6xl"
+            className="mt-3 font-serif text-4xl leading-[1.15] text-white sm:text-5xl md:text-6xl"
           >
             Dedication. Expertise. Passion.
           </motion.h1>
-          <motion.p variants={item} className="mt-6 max-w-3xl text-base sm:text-lg md:text-xl leading-8 text-slate-600">
-            We’re not just a team—creative nerds who live and breathe visuals. From capturing cinematic shots to editing
+          <motion.p variants={item} className="mt-6 max-w-3xl text-base sm:text-lg md:text-xl leading-8 text-white/90">
+            We're not just a team—creative nerds who live and breathe visuals. From capturing cinematic shots to editing
             every frame to perfection, each member of Motion And Capture Films brings something special to the table.
             Together, we turn stories into unforgettable screen moments.
           </motion.p>
@@ -89,7 +94,7 @@ export default function AboutUsPage() {
         >
           {TEAM.map((m) => (
             <motion.li key={m.name} variants={item} className="group">
-              <div className="relative overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-black/5">
+              <div className="relative overflow-hidden rounded-2xl bg-yellow-100 shadow-sm ring-1 ring-black/100">
                 <div className="aspect-square w-full overflow-hidden">
                   <img
                     src={m.image}
@@ -98,8 +103,8 @@ export default function AboutUsPage() {
                   />
                 </div>
                 <div className="p-4">
-                  <h3 className="font-serif text-xl text-slate-700">{m.name}</h3>
-                  <p className="mt-1 text-sm text-slate-500">{m.role}</p>
+                  <h3 className="font-serif text-xl text-black">{m.name}</h3>
+                  <p className="mt-1 text-sm text-black/70">{m.role}</p>
                 </div>
               </div>
             </motion.li>

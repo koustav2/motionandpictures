@@ -7,7 +7,6 @@ export const defaultNav = [
     { label: "Catalog", href: "/catalog" },
     { label: "About Us", href: "/about-us" },
     { label: "Contact", href: "/contact" },
-    { label: "Book Online", href: "/book-online" },
 ];
 export default function PageShell({
     title,
@@ -15,7 +14,7 @@ export default function PageShell({
     children,
 }) {
     return (
-        <div className="min-h-screen flex flex-col bg-white text-gray-900">
+        <div className="min-h-screen flex flex-col bg-white text-black">
             <Header title={title} nav={defaultNav} currentPath={currentPath} />
             <main className="flex-1">{children}</main>
             <Footer />

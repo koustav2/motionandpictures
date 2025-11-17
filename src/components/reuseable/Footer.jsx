@@ -18,10 +18,10 @@ const hours = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#F7F0EF] text-[#2B2A29]">
+    <footer className="bg-black text-white">
       <div className="px-4 md:px-8">
         <div className="mx-auto max-w-7xl py-14 md:py-20">
-          <h2 className="text-center font-serif text-4xl md:text-5xl tracking-tight">
+          <h2 className="text-center font-serif text-4xl md:text-5xl tracking-tight text-yellow-300">
             Contact Us
           </h2>
         </div>
@@ -31,11 +31,11 @@ export default function Footer() {
         <div className="mx-auto max-w-7xl items-start gap-12 flex flex-wrap md:grid md:grid-cols-3">
 
           <div className="w-1/2 md:w-auto">
-            <h3 className="font-serif text-3xl md:text-4xl mb-6 flex items-center gap-3">
-              <MapPinIcon className="h-7 w-7" />
+            <h3 className="font-serif text-3xl md:text-4xl mb-6 flex items-center gap-3 text-yellow-300">
+              <MapPinIcon className="h-7 w-7 text-yellow-300" />
               Address
             </h3>
-            <p className="text-lg leading-relaxed">
+            <p className="text-lg leading-relaxed text-white/90">
               Ruiya Purbapara, P.O.- Patulia,<br />
               Barrackpore, Kolkata, West<br />
               Bengal, India – 700 119
@@ -43,25 +43,25 @@ export default function Footer() {
           </div>
 
           <div className="w-1/2 md:w-auto">
-            <h3 className="font-serif text-3xl md:text-4xl mb-6 flex items-center gap-3">
-              <PhoneIcon className="h-7 w-7" />
+            <h3 className="font-serif text-3xl md:text-4xl mb-6 flex items-center gap-3 text-yellow-300">
+              <PhoneIcon className="h-7 w-7 text-yellow-300" />
               Contact
             </h3>
 
             <a
               href="tel:+918420544861"
-              className="block text-xl font-semibold tracking-wide"
+              className="block text-xl font-semibold tracking-wide text-white hover:text-white/80 transition"
             >
               (+91) 84205 44861
             </a>
 
             <div className="mt-3 flex flex-col gap-2">
               <a
-                href="mailto:hello@example.com"
-                className="inline-flex items-center gap-2 text-lg hover:opacity-80 transition"
+                href="mailto:motionandcapturefilms@gmail.com"
+                className="inline-flex items-center gap-2 text-lg text-white/90 hover:text-white hover:opacity-80 transition"
               >
-                <EnvelopeIcon className="h-5 w-5" />
-                hello@example.com
+                <EnvelopeIcon className="h-5 w-5 text-white" />
+                motionandcapturefilms@gmail.com
               </a>
             </div>
 
@@ -69,21 +69,21 @@ export default function Footer() {
               <a
                 href="#"
                 aria-label="Social 1"
-                className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-black text-white hover:opacity-90 transition"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white text-black hover:opacity-90 transition"
               >
                 <AtSymbolIcon className="h-5 w-5" />
               </a>
               <a
                 href="#"
                 aria-label="Social 2"
-                className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-black text-white hover:opacity-90 transition"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white text-black hover:opacity-90 transition"
               >
                 <GlobeAltIcon className="h-5 w-5" />
               </a>
               <a
                 href="#"
                 aria-label="Social 3"
-                className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-black text-white hover:opacity-90 transition"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white text-black hover:opacity-90 transition"
               >
                 <ShareIcon className="h-5 w-5" />
               </a>
@@ -91,15 +91,15 @@ export default function Footer() {
           </div>
 
           <div className="w-full md:w-auto">
-            <h3 className="font-serif text-3xl md:text-4xl mb-6 flex items-center gap-3">
-              <ClockIcon className="h-7 w-7" />
+            <h3 className="font-serif text-3xl md:text-4xl mb-6 flex items-center gap-3 text-yellow-300">
+              <ClockIcon className="h-7 w-7 text-yellow-300" />
               Opening Hours
             </h3>
             <dl className="space-y-4 text-lg">
               {hours.map((h) => (
                 <div key={h.day} className="grid grid-cols-2">
-                  <dt className="font-semibold">{h.day}</dt>
-                  <dd className="text-right">{h.time}</dd>
+                  <dt className="font-semibold text-white">{h.day}</dt>
+                  <dd className="text-right text-white/90">{h.time}</dd>
                 </div>
               ))}
             </dl>
@@ -108,9 +108,8 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom bar */}
-      <div className="border-t border-black/10">
-        <div className="mx-auto max-w-7xl px-4 md:px-8 py-6 text-sm text-black/60">
+      <div className="border-t border-white/10">
+        <div className="mx-auto max-w-7xl px-4 md:px-8 py-6 text-sm text-white/60 text-center">
           © {new Date().getFullYear()} Motion And Capture Films. All rights reserved.
         </div>
       </div>

@@ -7,9 +7,8 @@ export default function AboutSection() {
   const controls = useAnimation();
   const [ref, inView] = useInView({ threshold: 0.25, triggerOnce: false });
 
-
   const lastY = useRef(0);
-  const [direction, setDirection] = useState("down"); 
+  const [direction, setDirection] = useState("down");
 
   useEffect(() => {
     lastY.current = window.scrollY;
@@ -39,20 +38,15 @@ export default function AboutSection() {
     };
   };
 
-  // Drive animations based on visibility
   useEffect(() => {
-    const v = makeVariants(direction);
-    if (inView) {
-      controls.start("visible");
-    } else {
-      controls.start("leave");
-    }
+    if (inView) controls.start("visible");
+    else controls.start("leave");
   }, [inView, direction]);
 
   const variants = makeVariants(direction);
 
   return (
-    <section ref={ref} className="w-full bg-[#F7F0EF] text-[#2B2A29] overflow-hidden">
+    <section ref={ref} className="w-full bg-black text-white overflow-hidden">
       <motion.div
         className="mx-auto max-w-6xl px-4 py-20 sm:py-24 md:py-28"
         variants={variants}
@@ -60,33 +54,32 @@ export default function AboutSection() {
         animate={controls}
       >
 
-        <motion.div variants={variants} className="text-center">
-          <p className="mx-auto max-w-4xl text-[10px] sm:text-sm tracking-[0.22em] text-slate-700/90">
-            Weddings & Pre-Weddings <span className="mx-2 text-slate-400">|</span> Corporate Events
-            <span className="mx-2 text-slate-400">|</span> Social Media Content
-          </p>
-        </motion.div>
-
-
+        {/* Heading */}
         <motion.h1
           variants={variants}
-          className="mt-8 text-center font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.15] text-slate-700"
+          className="text-center font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.15] text-[#D4AF37]"
         >
-          About Motion and Capture Films
+          About Motion And Capture Films
         </motion.h1>
 
+        {/* Description */}
         <motion.div variants={variants} className="mt-10 flex justify-center">
-          <p className="mx-auto max-w-3xl text-center text-base sm:text-lg md:text-xl leading-8 md:leading-9 text-slate-600">
-            At Motion And Capture Films, we don’t just edit videos — we craft visual experiences. From cinematic
+          <p className="mx-auto max-w-3xl text-center text-base sm:text-lg md:text-xl leading-8 md:leading-9 text-white">
+            At Motion And Capture Films, we don't just edit videos — we craft visual experiences. From cinematic
             storytelling to crisp corporate films, our passion is bringing your vision to life, frame by frame. With a
             keen eye for detail and a flair for creativity, we partner with brands, creators, and individuals to deliver
             standout content that connects.
           </p>
         </motion.div>
 
-        <motion.p variants={variants} className="mt-8 text-center text-sm font-semibold text-neutral-800">
-          <span className="italic">(Tell your story & build trust)</span>
+        {/* Tagline footer */}
+        <motion.p
+          variants={variants}
+          className="mt-8 text-center text-sm font-semibold italic text-white"
+        >
+          (Tell your story & build trust)
         </motion.p>
+
       </motion.div>
     </section>
   );

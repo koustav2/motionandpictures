@@ -7,45 +7,48 @@ import TestimonialCarousel from "../TestimonialCarousel";
 export default function Home() {
     return (
         <>
-            <section className="relative w-full h-screen overflow-hidden">
-                {/* Background video */}
-                <video
-                    className="absolute inset-0 object-cover w-full h-full"
-                    src="/MAC_Promo_02_website.mp4"     // put file in /public/videos/
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                />
+            <section className="relative w-full h-screen flex flex-col overflow-hidden">
 
-                <div className="absolute inset-0 pointer-events-none bg-gradient-to-r from-black/60 via-black/30 to-transparent" />
+                {/* VIDEO SECTION — FULL HEIGHT */}
+                <div className="relative w-full flex-1 overflow-hidden">
 
-                <div className="relative z-10 flex items-center h-full">
-                    <div className="mx-auto w-full max-w-[1280px] px-4 md:px-8">
-                        <div className="flex items-start">
-                            <span className="mt-2 mr-6 hidden h-64 w-px bg-[#D4AF37]/70 md:block" />
+                    {/* Background Video */}
+                    <video
+                        className="absolute inset-0 w-full h-full object-cover"
+                        src="/MAC_Promo_02_website.mp4"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                    />
 
-                            <div className="max-w-2xl text-white">
-                                <h1 className="font-serif text-5xl leading-tight tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
-                                    An Editing<br />Destination
-                                </h1>
+                    {/* Subtle 20% Black Overlay */}
+                    <div className="absolute inset-0 pointer-events-none bg-black/20" />
 
-                                <p className="mt-6 text-base leading-relaxed sm:text-lg md:text-xl text-white/90">
-                                    We offer professional video editing services that turn raw footage into
-                                    polished, impactful stories. From corporate promos and documentaries to
-                                    weddings and social media content, we deliver cinematic edits with expert
-                                    color grading, sound design, motion graphics, and more. Our team ensures
-                                    every frame supports your vision, creating visually compelling content
-                                    that engages and resonates with your audience.
-                                </p>
-                            </div>
-                        </div>
+                    {/* Gradient overlay for cinematic effect */}
+                    <div className="absolute inset-0 pointer-events-none bg-gradient-to-r from-black/60 via-black/30 to-transparent" />
+
+                    {/* Center Text */}
+                    <div className="relative z-10 flex items-center justify-center h-full text-center px-4">
+                        <h1 className="font-serif text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight whitespace-nowrap">
+                            An Editing Destination...
+                        </h1>
                     </div>
+
                 </div>
+
+                {/* BLACK BAR WITH TEXT */}
+                <div className="w-full h-[10vh] bg-black flex items-center justify-center">
+                    <p className="text-white text-lg sm:text-xl tracking-wide">
+                        Weddings & Pre-Weddings | Corporate Events | Social Media Content
+                    </p>
+                </div>
+
             </section>
-            <AboutSection/>
+
+            <AboutSection />
             <Services />
-            <TestimonialCarousel/>
+            <TestimonialCarousel />
         </>
     );
 }

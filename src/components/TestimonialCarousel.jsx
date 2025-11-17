@@ -9,11 +9,13 @@ const TESTIMONIALS = [
     author: "Pritha Bandhopadhyay",
   },
   {
-    quote: "Working with Motion And Capture Films was an absolute pleasure. Their creativity and professionalism took our project to the next level!”",
+    quote:
+      "Working with Motion And Capture Films was an absolute pleasure. Their creativity and professionalism took our project to the next level!”",
     author: "Amit Kumar Mali",
   },
   {
-    quote: "I just love how they had put efforts in their work and made our story this so memorable.",
+    quote:
+      "I just love how they had put efforts in their work and made our story this so memorable.",
     author: "Kartick Halder",
   },
 ];
@@ -73,7 +75,7 @@ export default function TestimonialCarousel() {
 
   return (
     <section
-      className="relative isolate w-full bg-[#F7F0EF] text-[#2B2A29]"
+      className="relative isolate w-full bg-black text-white"
       onMouseEnter={stop}
       onMouseLeave={start}
       role="region"
@@ -85,14 +87,14 @@ export default function TestimonialCarousel() {
           <button
             onClick={prev}
             aria-label="Previous testimonial"
-            className="pointer-events-auto inline-flex h-11 w-11 items-center justify-center rounded-full border border-neutral-400/70 bg-white/70 backdrop-blur transition hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-neutral-800"
+            className="pointer-events-auto inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/30 bg-white/10 backdrop-blur transition hover:bg-white/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-white text-white"
           >
             <ChevronLeft className="h-5 w-5" />
           </button>
           <button
             onClick={next}
             aria-label="Next testimonial"
-            className="pointer-events-auto inline-flex h-11 w-11 items-center justify-center rounded-full border border-neutral-400/70 bg-white/70 backdrop-blur transition hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-neutral-800"
+            className="pointer-events-auto inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/30 bg-white/10 backdrop-blur transition hover:bg-white/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-white text-white"
           >
             <ChevronRight className="h-5 w-5" />
           </button>
@@ -108,18 +110,20 @@ export default function TestimonialCarousel() {
               transition={{ duration: 0.45, ease: "easeOut" }}
               className="w-full"
             >
-              <h3 className="mx-auto max-w-[30ch]  font-semibold tracking-wide text-slate-700 text-base md:text-lg">
+              {/* AUTHOR NAME (GOLDEN) */}
+              <h3 className="mx-auto max-w-[30ch] font-semibold tracking-wide text-[#D4AF37] text-base md:text-lg">
                 {items[index].author}
               </h3>
-              <div className="mx-auto mt-3 h-px w-8 bg-amber-600/60" aria-hidden />
 
-              <blockquote className="mx-auto mt-8 max-w-4xl px-2 font-serif text-2xl leading-relaxed text-neutral-900 sm:text-3xl md:text-4xl">
-                “{items[index].quote}”
+              <div className="mx-auto mt-3 h-px w-8 bg-white/60" aria-hidden />
+
+              <blockquote className="mx-auto mt-8 max-w-4xl px-2 font-serif text-2xl leading-relaxed text-white sm:text-3xl md:text-4xl">
+                "{items[index].quote}"
               </blockquote>
             </motion.div>
           </AnimatePresence>
 
-          <div className="mt-14 flex items-center gap-3 text-neutral-900">
+          <div className="mt-14 flex items-center gap-3 text-white">
             {items.map((_, i) => (
               <Dot
                 key={i}
