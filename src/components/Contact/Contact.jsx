@@ -71,7 +71,7 @@ export default function ContactSection() {
 
             <div>
               <p className="font-semibold tracking-wide">BUSINESS HOURS:</p>
-              <p className="mt-2">Mon – Sat: 10:00 am – 7:00 pm</p>
+              <p className="mt-2">Mon – Sat: 10:00 am – 4:00 pm</p>
               <p>Sunday: 10:00 am – 4:00 pm</p>
             </div>
 

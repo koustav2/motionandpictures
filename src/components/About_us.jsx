@@ -9,13 +9,13 @@ import { useInView } from "react-intersection-observer";
 const TEAM = [
   {
     name: "Suvamay Bera",
-    role: "Founder",
+    role: "Founder & Senior Video Editor",
     image:
       "https://static.wixstatic.com/media/27bb82_1484cf72a0f1482d8f2dc8b06ac6300d~mv2.jpg/v1/fill/w_600,h_600,al_c,q_80,usm_0.66_1.00_0.01/WhatsApp%20Image%202025-06-08%20at%2016_29_48_506bec6a.jpg",
   },
   {
     name: "Sourav Biswas",
-    role: "Video Editor",
+    role: "Junior Video Editor",
     image:
       "https://static.wixstatic.com/media/27bb82_d8d365113f644f6394c3df7fa0686f91~mv2.jpg/v1/crop/x_0,y_160,w_640,h_640/fill/w_600,h_600,al_c,q_80,usm_0.66_1.00_0.01/480287090_4517988245094331_4227444870540609244_n.jpg",
   },
